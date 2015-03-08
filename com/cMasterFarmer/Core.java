@@ -15,7 +15,11 @@ import org.parabot.environment.scripts.framework.Strategy;
         servers = { "OSPvP" },
         version = 1.0)
 public class Core extends Script {
-    private static ArrayList<Strategy> strategies = new ArrayList<Strategy>();
+    private static ArrayList<Strategy> strategies;
+    
+    public Core(){
+        strategies = new ArrayList<Strategy>();    
+    }
 
     public boolean onExecute() {
         strategies.add(new Steal());
